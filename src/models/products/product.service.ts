@@ -28,7 +28,6 @@ const UpdateProductFromDB = async (
     },
     {
       new: true,
-      runValidators: true,
     }
   );
 

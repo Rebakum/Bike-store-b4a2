@@ -1,5 +1,6 @@
 import cors from "cors";
 import express, { Application, NextFunction, Request, Response } from "express";
+import { ordersRouter } from "./models/orders/order.routes";
 import { ProductRoutes } from "./models/products/product.routes";
 
 const app: Application = express();
@@ -17,6 +18,7 @@ app.use((err: any, req: Request, res: Response, next: NextFunction) => {
 
 //application routes
 app.use("/api/products", ProductRoutes);
+app.use("/api/orders", ordersRouter);
 
 app.get("/", (req: Request, res: Response) => {
   res.send("Hello World!");

@@ -82,9 +82,9 @@ const deleteProduct = async (req: Request, res: Response) => {
 const updateProduct = async (req: Request, res: Response) => {
   try {
     const bikeId = req?.params?.productId;
-    const updateData: object = req.body;
+    const updateData = req.body;
     if (!bikeId) {
-      return res.status(400).json({
+      res.status(400).json({
         message: "Product ID is required",
         status: false,
       });
@@ -95,13 +95,13 @@ const updateProduct = async (req: Request, res: Response) => {
       updateData
     );
 
-    return res.status(200).json({
+    res.status(200).json({
       message: "Bike updated successfully",
       status: true,
       data: result,
     });
   } catch (err: any) {
-    return res.status(500).json({
+    res.status(500).json({
       message: "Validation failed",
       status: false,
       error: err.errorn || err.name || "Unkown Error",
