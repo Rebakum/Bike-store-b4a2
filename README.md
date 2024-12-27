@@ -1,4 +1,5 @@
 # 🚴 Bike Store Management System
+live link: https://bike-store-b4a2-server.vercel.app
 
 The **Bike Store Management System** is a full-stack web application designed to manage the inventory, orders, and revenue of a bike store. This project includes features like inventory tracking, order placement, and revenue calculation using Node.js, Express, MongoDB, and React.
 
